@@ -1,0 +1,24 @@
+Actual local execution (not remote CI)
+Python 3.12.3; FFmpeg 6.1.1-3ubuntu5
+Command: python3 -m unittest discover -s tests -v
+Exit code: 0
+
+test_cli_invalid_range (test_compositor.IntegrationTests.test_cli_invalid_range) ... ok
+test_cli_json (test_compositor.IntegrationTests.test_cli_json) ... ok
+test_encoder_failure_preserves_old_output (test_compositor.IntegrationTests.test_encoder_failure_preserves_old_output) ... ok
+test_hdr_rejected (test_compositor.IntegrationTests.test_hdr_rejected) ... ok
+test_matrix_pixels_duration_audio (test_compositor.IntegrationTests.test_matrix_pixels_duration_audio) ... ok
+test_offset_timestamps (test_compositor.IntegrationTests.test_offset_timestamps) ... ok
+test_refuse_overwrite_and_fail_clean (test_compositor.IntegrationTests.test_refuse_overwrite_and_fail_clean) ... ok
+test_short_audio_padded (test_compositor.IntegrationTests.test_short_audio_padded) ... ok
+test_graph_contract (test_compositor.UnitTests.test_graph_contract) ... ok
+test_invalid_geometry (test_compositor.UnitTests.test_invalid_geometry) ... ok
+test_range (test_compositor.UnitTests.test_range) ... ok
+
+----------------------------------------------------------------------
+Ran 11 tests in 7.072s
+
+OK
+Coverage: 6 real render combinations (0/50/100 × audio/silent), short looping mask, pixel checks at 0.1s and 1.0s, audio waveform correlation >0.98, rational FPS, HDR rejection, timestamp offset, short audio padding, invalid input, CLI JSON. Encoder-failure cleanup is fault-injected; other media paths use real FFmpeg.
+Initial test execution failed because module was absent; initial duration-report regression failed on missing audio_duration_ok, then implementation was extended.
+Independent reviewer not available within this subagent; parent review recommended.

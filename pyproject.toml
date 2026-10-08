@@ -1,0 +1,17 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "dieu-mist-compositor"
+version = "0.1.0"
+description = "Independent white-canvas grayscale-alpha mist compositor for FFmpeg"
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = []
+
+[project.scripts]
+mist-compositor = "mist_compositor:main"
+
+[tool.setuptools]
+py-modules = ["mist_compositor"]
